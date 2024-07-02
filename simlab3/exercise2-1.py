@@ -42,3 +42,22 @@ try:
     print(f"The value at index {index} is {value}")
 except (TypeError, IndexError) as e:
     print(f"Error: {e}")
+
+# cgt-generated revised code
+
+def get_value_from_array(array, index):
+    # Check if index is within bounds
+    if index < 0 or index >= len(array):
+        raise IndexError("Index out of bounds")
+    # Retrieve the element from the array at the specified index
+    return array[index]
+
+# Example usage
+array = [10, 20, 30, 40, 50]
+index = 2
+try:
+    value = get_value_from_array(array, index)
+    print(f"The value at index {index} is {value}")
+except IndexError as e:
+    print(e)
+
